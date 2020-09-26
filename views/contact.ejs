@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <script src="https://kit.fontawesome.com/36fd1c5a01.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+
+    <h1><i class="far fa-address-book"></i> &nbsp; Contacts</h1>
+    <div id = "contact_container">
+        <ul>
+            <% for( let i of Contact ) { %>  
+                <li>
+                    <p><i class="fas fa-user-circle"></i> <%= i.name %> </p>
+                    <p>
+                        <i class="fas fa-phone-square-alt"></i>
+                        <%= i.phone %>
+                        &nbsp;
+                        <a class="delete_button" href="/delete-contact/?id=<%= i._id%>">
+                            <i class="fas fa-times-circle"></i>
+                        </a>
+                    </p>
+                </li>     
+            <% } %>
+        </ul>
+    </div>
+    <div id = "form_div">   
+        <form action="/create-contact" method="POST">
+            <div>
+                <input type="text" name="name" placeholder="name" required >
+            </div>            
+            <div>
+                <input type="number" name="phone" placeholder="phone No" required>
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+    <script src="/js/contact.js"></script>
+</body>
+</html>

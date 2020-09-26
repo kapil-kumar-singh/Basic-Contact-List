@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cyan;
+    text-align: center;
+}
+
+ul {
+    
+    padding: 0px 5px;
+    margin: 10px 2px;
+}
+
+li {
+    /* list-style: none; */
+    height: 50px;
+    background-color: rgb(245, 235, 222);
+    display: flex;
+    justify-content: space-between;
+    border: black 3px solid;
+    margin: 5px;
+    padding: 2px 5px;
+}
+
+ul li p{
+    margin: 3px;
+    font-size: x-large;
+    /* background-color: gainsboro; */
+}
+
+#contact_container{
+    margin: auto;
+    width: 50%;
+    background-color: rgb(255, 164, 89);
+    border: 2.5px solid blue;
+    border-radius: 7px;
+}
+.color{
+    background-color: rgba(85, 107, 47, 0.747);
+}
+
+#form_div {
+    width: 50%;
+    margin: auto;
+    margin-top: 3px;
+    padding: 5px 30px 5px 20px;
+    background-color: rgb(255, 164, 89);
+
+    border: blue 2.5px solid;
+    border-radius: 7px;
+}
+#form_div form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete_button {
+    color: rgb(165, 0, 0);
+    padding: 0px 20px;
+}
+
+input{
+    width: 10rem;
+    outline: none;
+    background: none;
+    background-color: rgb(245, 235, 222);
+    border: none;
+    border-bottom: 2px solid black;
+    line-height: 1.2rem;
+}
+
+button{
+    margin-left: 10px;
+}
+
+@media (max-width : 900px){
+    #contact_container{
+        width: 100%;
+    }
+    #form_div {
+        width: 100%;
+    }
+
+}
